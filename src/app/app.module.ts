@@ -12,6 +12,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import LocomotiveScroll from 'locomotive-scroll';
 
 @NgModule({
   declarations: [
@@ -34,4 +35,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  scroll;
+
+  ngOnInit() {
+    this.scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+    });
+  }
+  
+}
