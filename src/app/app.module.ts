@@ -41,8 +41,9 @@ export class AppModule {
   ngOnInit() {
     this.scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
-      smooth: true
+      smooth: true,
+      smoothMobile: false,
+      inertia: 0.75,
     });
   }
-  
 }
