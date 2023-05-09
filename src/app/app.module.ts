@@ -12,7 +12,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import LocomotiveScroll from 'locomotive-scroll';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @NgModule({
   declarations: [
@@ -36,14 +37,7 @@ import LocomotiveScroll from 'locomotive-scroll';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  scroll;
-
   ngOnInit() {
-    this.scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-      smoothMobile: false,
-      inertia: 0.75,
-    });
+    AOS.init();
   }
 }

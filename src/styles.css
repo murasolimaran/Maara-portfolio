@@ -115,7 +115,7 @@ a {
   }
 
   .navbar a i {
-    padding: 0;
+    padding: 0 !important;
   }
 
   .navbar a span {
@@ -123,7 +123,7 @@ a {
   }
 
   .navbar a:hover {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem !important;
   }
 
   .home {
@@ -131,9 +131,9 @@ a {
     gap: 2rem;
   }
 
-  .home .image img {
-    height: 30rem;
-    width: 30rem;
+  .home.banner-img .image img {
+    height: 35rem !important;
+    width: 35rem !important;
   }
 
   .home .content h3 {
