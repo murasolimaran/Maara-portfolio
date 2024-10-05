@@ -15,21 +15,21 @@ export class AboutComponent implements OnInit {
 
   experienceCountStop: any = setInterval(() => {
     this.experienceCount++;
-    if (this.experienceCount == 4) {
+    if (this.experienceCount == 5) {
       clearInterval(this.experienceCountStop);
     }
   }, 100);
 
   clientCountStop: any = setInterval(() => {
     this.clientCount++;
-    if (this.clientCount == 50) {
+    if (this.clientCount == 25) {
       clearInterval(this.clientCountStop);
     }
   }, 100);
 
   projectCountStop: any = setInterval(() => {
     this.projectCount++;
-    if (this.projectCount == 100) {
+    if (this.projectCount == 50) {
       clearInterval(this.projectCountStop);
     }
   }, 100);
